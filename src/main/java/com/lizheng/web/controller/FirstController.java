@@ -8,6 +8,6 @@ public class FirstController {
 
     @GetMapping("/test")
     public String test() {
-        return "这是李政的测试服务";
+        return "2019一定发财一定变瘦一定脱单啦啦啦！";
     }
 }
