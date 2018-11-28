@@ -9,16 +9,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class FirstController {
 
-    @GetMapping("/yeah")
+    @GetMapping("/index")
     public String test(Model model) {
-
-        Boyfriend boyfriend = new Boyfriend();
-//        boyfriend.setName("赵本山");
-        model.addAttribute("boyfriend",boyfriend);
         return "index";
     }
 
-    @PostMapping("/boy")
+    @GetMapping("/boy")
     public String boy(Model model) {
         Boyfriend boyfriend = new Boyfriend();
         boyfriend.setName("赵本山");
@@ -28,6 +24,6 @@ public class FirstController {
         boyfriend.setCharacter("逗");
         boyfriend.setLink("https://baike.baidu.com/pic/%E8%B5%B5%E6%9C%AC%E5%B1%B1/131652/0/48540923dd54564e078bd8d5b6de9c82d0584f6b?fr=lemma&ct=single#aid=0&pic=48540923dd54564e078bd8d5b6de9c82d0584f6b");
         model.addAttribute("boyfriend",boyfriend);
-        return "index";
+        return "boy";
     }
 }

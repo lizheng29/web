@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--<script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css"/>-->
+    <meta charset="UTF-8">
+    <title>HI</title>
+</head>
+<body>
+<div>
+    <div>
+        <div>
+            <ul>
+                <li><p>身高： <span th:text="${boyfriend.height}"></span></p></li>
+                <li><p>体重：<span th:text="${boyfriend.weight}"></span></p></li>
+                <li><p>性格：<span th:text="${boyfriend.character}"></span></p></li>
+                <li><p>姓名: <span th:text="${boyfriend.name}"></span></p></li>
+                <li><p>年龄：<span th:text="${boyfriend.age}"></span></p></li>
+                <th:block th:if="${boyfriend.link} ne null">
+                    <li><p>想看看我嘛？：<a th:text="点击查看" th:href="${boyfriend.link}"></a></p></li>
+                </th:block>
+                <a href="#" th:href = "@{/index}">返回</a>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
