@@ -20,7 +20,7 @@
                 <th:block th:if="${boyfriend.link} ne null">
                     <li><p>想看看我嘛？：<a th:text="点击查看" th:href="${boyfriend.link}"></a></p></li>
                 </th:block>
-                <a href="#" th:href = "@{/index}">返回</a>
+                <a href="#" th:href = "@{/index?scene=4#wechat_redirect}">返回</a>
             </ul>
         </div>
     </div>
