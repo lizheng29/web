@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <meta charset="UTF-8">
+    <title>HI</title>
+</head>
+<body>
+<div class="tabbable">
+     
+    <ul class="nav nav-tabs">
+           
+        <li class="active"><a href="#tab1" data-toggle="tab">一键生成男友</a></li>
+           
+        <li><a href="#tab2" data-toggle="tab">一键生成女友</a></li>
+           
+        <li><a href="#tab3" data-toggle="tab">待续</a></li>
+         
+    </ul>
+      
+    <div class="tab-content">
+           
+        <div class="tab-pane active " id="tab1">
+                 
+            <ul class="list-group">
+                <li class="list-group-item"><p>身高： <span th:text="${boyfriend.height}"></span></p></li>
+                <li class="list-group-item"><p>体重：<span th:text="${boyfriend.weight}"></span></p></li>
+                <li class="list-group-item"><p>性格：<span th:text="${boyfriend.character}"></span></p></li>
+                <li class="list-group-item"><p>姓名: <span th:text="${boyfriend.name}"></span></p></li>
+                <li class="list-group-item"><p>年龄：<span th:text="${boyfriend.age}"></span></p></li>
+                <li class="list-group-item"><p>想看看我嘛？：<a th:text="点击查看" th:href = "${boyfriend.link}"></a></p></li>
+                <form action="#" th:action="@{/boy}" method="post">
+                    <button type="submit" class="btn btn-default btn-lg ">一键生成男友</button>
+                </form>
+            </ul>
+               
+        </div>
+           
+        <div class="tab-pane" id="tab2">
+                  <p>Howdy, I'm in Section 2.</p>
+               
+        </div>
+           
+        <div class="tab-pane" id="tab3">
+                  <p>What up girl, this is Section 3.</p>
+               
+        </div>
+         
+    </div>
+</div>
+</body>
+</html>
